@@ -15,15 +15,15 @@
 						<div class="carousel-inner" role="listbox">
 							
 							<div class="item active">
-								<a href="" target="_blank"><img src="/MyBlog/public/img/banner/banner_01.jpg" alt="" class="img-responsive"></a>
+								<a href="" target="_blank"><img src="{{asset('img/banner/banner_01.jpg')}}" alt="" class="img-responsive"></a>
 								
 							</div>
 							<div class="item">
-								<a href="" target="_blank"><img src="/MyBlog/public/img/banner/banner_02.jpg" alt="" class="img-responsive"></a>
+								<a href="" target="_blank"><img src="{{asset('img/banner/banner_02.jpg')}}" alt="" class="img-responsive"></a>
 								
 							</div>
 							<div class="item">
-								<a href="" target="_blank"><img src="/MyBlog/public/img/banner/banner_03.jpg" alt="" class="img-responsive"></a>
+								<a href="" target="_blank"><img src="{{asset('img/banner/banner_03.jpg')}}" alt="" class="img-responsive"></a>
 								
 							</div>
 						</div>
@@ -38,14 +38,14 @@
                    
 					@foreach($articles as $article)
 					<article class="excerpt excerpt-2">
-						<a class="focus" href="/MyBlog/public/articleShow/{{$article->article_id}} ?>" title="">
-                        <img class="thumb" data-original="/MyBlog/public{{$article->article_thumb}}" src="/MyBlog/public/{{$article->article_thumb}}" alt=""></a>
+						<a class="focus" href="{{asset('articleShow')}}/{{$article->article_id}} ?>" title="">
+                        <img class="thumb" data-original="{{asset($article->article_thumb)}}" src="{{asset($article->article_thumb)}}" alt=""></a>
 						<header>
-                            <h2><a href="/MyBlog/public/articleShow/{{$article->article_id}}" title="">{{$article->article_title}}</a></h2>
+                            <h2><a href="{{asset('articleShow')}}/{{$article->article_id}}" title="">{{$article->article_title}}</a></h2>
 						</header>
 						<p class="meta">
-							<time class="time"><i class="glyphicon glyphicon-time"></i><{{$article->created_at}}</time>
-							<p class="note"><?php echo ($article->article_content)?></p>
+							<time class="time"><i class="glyphicon glyphicon-time"></i>{{$article->created_at}}</time>
+							<p class="note">{!!$article->article_content!!}</p>
 					</article>
 					@endforeach
  
@@ -70,7 +70,7 @@
 			                 最多点击
 			                <ul>
 			                  @foreach(json_decode($lists) as $list)
-			                  	<li ><a href="/MyBlog/public/articleShow/{{$list->article_id}}" > {{$list->article_title}}</a></li>
+			                  	<li ><a href="{{asset('articleShow')}}/{{$list->article_id}}" > {{$list->article_title}}</a></li>
 			                  @endforeach
 		                  
 			                </ul>

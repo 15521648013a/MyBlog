@@ -4,7 +4,7 @@
   <div class="content-wrap">
     <div class="content">
       <header class="article-header">
-        <h1 class="article-title"><?php echo $article->article_title?></h1>
+        <h1 class="article-title">{{$article->article_title }}</h1>
         <div class="article-meta"> 
         <span class="item article-meta-time">
           <time class="time" data-toggle="tooltip" data-placement="bottom" title="时间：<?php echo $article->created_at?>"><i class="glyphicon glyphicon-time"></i> <?php echo $article->created_at?></time>

@@ -40,7 +40,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li class="hidden-index {{isset($category)?'':'active'}} ">
 								<a data-cont="Sj" href="{{ asset('')}}">首页</a>
-							</li>
+							</li>s
 							<?php $cat=isset($category)?$category:'';?>
                             @foreach ($categories as $category)
 		 					<li class="{{$cat==$category->category_id ?'active':''}}">
@@ -53,7 +53,6 @@
 							    	<span class="caret"></span></a>
 							    <ul class="dropdown-menu">
 								    <li><a href="{{ asset('login')}}">登录</li>
-							    	<li><a href="register.php">注册</a></li>
 							    	<li><a href="{{ asset('loginOut')}}">退出</a></li>
 							    </ul>
 						    </li>
