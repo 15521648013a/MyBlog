@@ -13,14 +13,14 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css')}}">
 		<link rel="apple-touch-icon-precomposed" href="{{ asset('img/icon/icon.png')}}">
 		<link rel="shortcut icon" href="{{ asset('img/icon/favicon.ico')}}">
-		<script src="/MyBlog/public/js/jquery-2.1.4.min.js"></script>
+		<script src="{{ asset('js/jquery-2.1.4.min.js')}}"></script>
 		<!-- <script src="js/nprogress.js"></script> -->
 		<!-- <script src="js/jquery.lazyload.min.js"></script> -->
 		<!--[if gte IE 9]>
-  <script src="/MyBlog/public/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="/MyBlog/public/js/html5shiv.min.js" type="text/javascript"></script>
-  <script src="/MyBlog/public/js/respond.min.js" type="text/javascript"></script>
-  <script src="/MyBlog/public/js/selectivizr-min.js" type="text/javascript"></script>
+  <script src="{{ asset('js/jquery-1.11.1.min.js')}}" type="text/javascript"></script>
+  <script src="{{ asset('js/html5shiv.min.js')}}" type="text/javascript"></script>
+  <script src="{{ asset('js/respond.min.js')}}" type="text/javascript"></script>
+  <script src="{{ asset('js/selectivizr-min.js')}}" type="text/javascript"></script>
 <![endif]-->
 		<!--[if lt IE 9]>
   <script>window.location.href='upgrade-browser.html';</script>
